@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "fix": "eslint --fix --ext .js --ignore-path .gitignore .",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,5 +16,24 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.19.0",
     "sequelize-cli": "^6.4.1"
+  },
+  "precommit": [
+    "lint"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-lodash": "^3.3.4",
+    "eslint": "^5.9.0",
+    "eslint-config-adenvt": "^1.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-unicorn": "^6.0.1",
+    "eslint-plugin-varspacing": "^1.2.1",
+    "eslint-plugin-vue": "^4.7.1",
+    "pre-commit": "^1.2.2"
   }
 }

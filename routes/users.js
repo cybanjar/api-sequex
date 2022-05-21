@@ -1,15 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router  = express.Router()
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send(process.env.APP_NAME);
-});
+router.get('/', function (req, res, next) {
+  res.send(process.env.APP_NAME)
+})
 
-router.get('/me', function(req, res, next) {
-  res.json({
-    message: 'About Me Syamsul'
-  });
-});
+router.get('/me', function (req, res, next) {
+  res.json({ message: 'About Me Syamsul' })
+})
 
-module.exports = router;
+module.exports = router
