@@ -1,6 +1,7 @@
 const express   = require('express')
 const router    = express.Router()
 const Validator = require('fastest-validator')
+const Products  = require('../controllers/product-controller')
 
 const { Product } = require('../models')
 
@@ -52,10 +53,7 @@ router.put('/:id', async (req, res) => {
   return res.json(product)
 })
 
-router.get('/', async (req, res) => {
-  const products = await Product.findAll()
-  return res.json(products)
-})
+router.get('/', Products)
 
 router.get('/:id', async (req, res) => {
   const id = req.params.id

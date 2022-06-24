@@ -1,0 +1,32 @@
+# REST Client
+
+### /
+GET http://localhost:3000/
+
+### /products
+GET http://localhost:3000/products/
+
+###
+GET http://localhost:3000/products/5
+
+###
+POST http://localhost:3000/products/
+Content-Type: application/json
+
+{
+  "name": "Oppo 220",
+  "brand": "Oppo",
+  "description": "Nice to handphone"
+}
+
+###
+PUT http://localhost:3000/products/15
+Content-Type: application/json
+
+{
+  "name": "Ono opo 17",
+  "brand": "Oppo"
+}
+
+###
+DELETE http://localhost:3000/products/15
