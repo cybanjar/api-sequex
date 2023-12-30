@@ -21,7 +21,7 @@ app.use('/', indexRouter)
 // app.use('/users', usersRouter)
 // app.use('/products', productsRouter)
 
-const port = 3131
+const port = 3535
 app.listen(port, () => {
   consola.success(`Server running on ${port}`)
 })
