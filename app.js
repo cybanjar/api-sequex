@@ -3,6 +3,7 @@ const express      = require('express')
 const path         = require('path')
 const cookieParser = require('cookie-parser')
 const logger       = require('morgan')
+const consola      = require('consola')
 
 const indexRouter    = require('./routes')
 // const usersRouter    = require('./routes/users')
@@ -19,5 +20,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 // app.use('/users', usersRouter)
 // app.use('/products', productsRouter)
+
+const port = 3131
+app.listen(port, () => {
+  consola.success(`Server running on ${port}`)
+})
 
 module.exports = app
